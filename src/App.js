@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DisplayResult from "./Components/displayResult";
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,8 @@ class App extends Component {
             onChange={e => this.setState({ height: e.target.value })}
           />
         </div>
+
+        <DisplayResult weight={this.state.weight} height={this.state.height} />
       </div>
     );
   }
