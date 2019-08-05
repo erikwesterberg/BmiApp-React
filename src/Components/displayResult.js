@@ -4,9 +4,9 @@ import "../result.css";
 
 class DisplayResult extends Component {
   calculate() {
-    var weight = this.props.weight;
-    var height = this.props.height;
-
+    let weight = this.props.weight;
+    let height = this.props.height;
+    
     return bmiCalculation(weight, height);
   }
 
