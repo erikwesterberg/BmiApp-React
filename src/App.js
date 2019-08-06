@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DisplayResult from "./Components/displayResult";
 import "./App.css";
+import MethodSelect from "./Components/MethodSelect"
 
 class App extends Component {
   constructor(props) {
@@ -12,15 +13,19 @@ class App extends Component {
     };
   }
 
+  methodChange = event => {
+    this.setState({ method: event.target.value });
+  };
+
   render() {
     return (
       
       <div className="masterDiv">
         <h1 className="header">Bmi-Calculator</h1>
-             <select id="method" value={this.state.method} onChange={(e) => this.setState({ method: e.target.value })}>
-                <option value="metric">METRIC (Weight in kg / Height in cm)</option>
-                <option value="imperial">IMPERIAL (Weight in pounds / Height in inches)</option>
-              </select>
+        <MethodSelect
+            method={this.state.method}
+            onChangeValue={this.methodChange}
+          />
         <div className="text">
           <label>Weight</label>
           <input
