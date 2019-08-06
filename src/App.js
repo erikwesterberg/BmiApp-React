@@ -14,18 +14,13 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="masterDiv">
         <h1 className="header">Bmi-Calculator</h1>
-        <select
-          id="method"
-          value={this.state.method}
-          onChange={e => this.setState({ method: e.target.value })}
-        >
-          <option value="metric">METRIC (Weight in kg / Height in cm)</option>
-          <option value="imperial">
-            IMPERIAL (Weight in pounds / Height in inches)
-          </option>
-        </select>
+             <select id="method" value={this.state.method} onChange={(e) => this.setState({ method: e.target.value })}>
+                <option value="metric">METRIC (Weight in kg / Height in cm)</option>
+                <option value="imperial">IMPERIAL (Weight in pounds / Height in inches)</option>
+              </select>
         <div className="text">
           <label>Weight</label>
           <input
