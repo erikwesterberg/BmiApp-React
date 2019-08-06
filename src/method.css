@@ -1,0 +1,27 @@
+.method {
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 35px;
+}
+
+#method {
+    border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 20px;
+  color: white;
+  background: black;
+}
+
+.options{
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 20px;
+}
+
+.main-div {
+    text-align: center;
+    /* right: 400px; */
+    /* position: absolute; */
+}

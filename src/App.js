@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DisplayResult from "./Components/displayResult";
 import "./App.css";
-import MethodSelect from "./Components/MethodSelect"
+import MethodSelect from "./Components/MethodSelect";
 
 class App extends Component {
   constructor(props) {
@@ -19,13 +19,12 @@ class App extends Component {
 
   render() {
     return (
-      
       <div className="masterDiv">
         <h1 className="header">Bmi-Calculator</h1>
         <MethodSelect
-            method={this.state.method}
-            onChangeValue={this.methodChange}
-          />
+          method={this.state.method}
+          onChangeValue={this.methodChange}
+        />
         <div className="text">
           <label>Weight</label>
           <input
@@ -47,8 +46,6 @@ class App extends Component {
         </div>
 
         <div>
-          <button className="metric">Metric</button>
-          <button className="imperial">Imperial</button>
           <DisplayResult
             weight={this.state.weight}
             height={this.state.height}
